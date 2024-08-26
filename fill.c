@@ -20,7 +20,7 @@ void	fill_win(struct fdf *fdf)
 	mlx_loop(fdf->data->mlx);
 }
 
-void	fillmatrix(t_fdf *fdf)
+void	fillmatrix(struct fdf *fdf)
 {
 	char	*tmpstr;
 	int		i;

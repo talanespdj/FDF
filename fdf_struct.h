@@ -6,7 +6,7 @@
 /*   By: tespandj <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/19 23:11:16 by tespandj          #+#    #+#             */
-/*   Updated: 2024/08/19 23:11:20 by tespandj         ###   ########.fr       */
+/*   Updated: 2024/08/26 20:02:21 by tespandj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef FDF_STRUCT_H
@@ -27,8 +27,6 @@ typedef struct point
 	int	z;
 }		t_point;
 
-
-
 typedef struct var
 {
 	char		***matrix;
@@ -37,7 +35,7 @@ typedef struct var
 	int			color;
 	int			rows;
 	int			fd;
-}		t_map;
+}			t_map;
 
 typedef struct mlx
 {
@@ -50,11 +48,10 @@ typedef struct mlx
 	int		width;
 	int		height;
 	int		endian;
-}		t_mlx;
+}			t_mlx;
 
 typedef struct cam
 {
-	// t_point		twod_offset;
 	t_point		isoffset;
 	t_proj		views;
 	double		angle;
@@ -62,7 +59,7 @@ typedef struct cam
 	int			relief;
 	int			x_offset;
 	int			y_offset;
-}		t_cam;
+}			t_cam;
 
 typedef struct spt
 {
@@ -78,25 +75,25 @@ typedef struct spt
 
 typedef struct s_bsl
 {
-	int dx;
-	int dy;
-	int dx1;
-	int dy1;
-	int px;
-	int py;
-	int x;
-	int y;
-	int xe;
-	int  ye;;
-}	t_bsl;
+	int		dx;
+	int		dy;
+	int		dx1;
+	int		dy1;
+	int		px;
+	int		py;
+	int		x;
+	int		y;
+	int		xe;
+	int		ye;
+}			t_bsl;
 
 typedef struct fdf
 {
 	struct mlx	*data;
 	struct var	*map;
 	struct cam	*cam;
-	int	width;
-	int	height;
-}		t_fdf;
+	int			width;
+	int			height;
+}			t_fdf;
 
 #endif

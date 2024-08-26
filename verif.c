@@ -108,13 +108,5 @@ void	verif_map(t_fdf *fdf)
 		}
 	}
 	if (fdf->map->fd == 42)
-	{
-		printf("il y a des lettres en arguments\n");
 		end_win(fdf);
-	}
 }
-
-/*
-	if (fdf->map->fd == 42)
-		end_win(fdf);
-*/

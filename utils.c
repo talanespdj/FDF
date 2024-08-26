@@ -47,23 +47,5 @@ void	freematrix(struct var *map)
 void	wegotasituation(struct var *map)
 {
 	freematrix(map);
-	exit(EXIT_FAILURE);
-}
-
-void	affmatrix(struct var *map)
-{
-	int	i;
-	int	r;
-
-	i = 0;
-	while (map->matrix[i])
-	{
-		r = 0;
-		while (map->matrix[i][r])
-		{
-			printf("%s", map->matrix[i][r]);
-			r++;
-		}
-		i++;
-	}
+	exit(1);
 }

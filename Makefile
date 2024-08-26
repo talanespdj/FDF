@@ -20,14 +20,14 @@ SRC = gnl.c \
 OBJS = $(SRC:.c=.o)
 
 .c.o:
-	$(CC) $(CFLAGS) -c -o $@ $< $(INCLUDES)
+	$(CC) $(CFLAGS) -c -o $@ $< 
 
 all: $(NAME)
 	
 $(NAME): $(OBJS)
 	make -C ./mlx
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(MLX_FLAGS)
-	echo "\t\tFil de fer est pret ✅"
+	echo "\n\t\tFil de fer est pret ✅\n"
 
 clean:
 	rm -rf $(OBJS)
@@ -42,10 +42,3 @@ re: fclean all
 .PHONY: all, clean, fclean, re
 
 .SILENT:
-
-
-# echo "\033[1mI to put isometric\033[0m"
-# echo "\033[1mJ to center\033[0m"
-# echo "\033[1mO to view it in 2D\033[0m"
-# echo "\033[1mY or U to change the angle\033[0m"
-# echo "\033[1mH or K to change the  relief\033[0m"
